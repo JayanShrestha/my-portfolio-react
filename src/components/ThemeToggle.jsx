@@ -11,7 +11,7 @@ const ThemeToggle = (props) => {
         className={`light:text-slate-900 text-n-1 font-sans ${props.className}`}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
-        {theme === "dark" ? `☀️ Light Mode` : "🌙 Dark Mode"}
+        {theme === "dark" ? `☀️Light` : "🌙Dark"}
       </Button>
       <ButtonGradient />
     </>
