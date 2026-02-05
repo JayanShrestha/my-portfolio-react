@@ -66,10 +66,10 @@ const Header = () => {
           ))}
         </div>
       </nav>
-      <ThemeToggle className="m-auto fixed" />
+      <ThemeToggle className="m-auto px-2 lg:px-7" />
 
       <div className="flex items-center justify-end mr-4 lg:hidden">
-        <Button onClick={toggleNavigation}>
+        <Button onClick={toggleNavigation} className="px-2">
           {openNavigation ? (
             <XMarkIcon className="h-10 w-10" />
           ) : (
