@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export function useTheme() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light"); // initial value for hook theme
   useEffect(() => {
-    //initiates whene theme is changed
+    //initiates whene theme is changed runs when the page loads first
     const root = window.document.documentElement;
     if (theme === "light") {
       root.classList.add("light");
