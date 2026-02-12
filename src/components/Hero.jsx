@@ -1,5 +1,7 @@
 import Section from "./Section";
 import useText from "../hooks/useText";
+import Typewriter from "typewriter-effect";
+import Portfolio from "../assets/Portfolio.png";
 
 const Hero = () => {
   const { animateOnLoad } = useText();
@@ -17,10 +19,18 @@ const Hero = () => {
           <h1
             className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h1 mb-6`}
           >
-            Hi, My Name is Jayan Shrestha.
+            Hi, I am {""}
+            <span className="text-color-1 inline-block">Jayan Shrestha.</span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Sydney Based Software Engineer
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8">
+            Sydney Based Full-Stack Software Engineer
+            <Typewriter
+              options={{
+                strings: ["M.Tech (Software Engineering)", ""],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </p>
         </div>
       </div>
