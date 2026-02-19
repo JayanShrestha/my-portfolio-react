@@ -2,15 +2,15 @@ import jsLogo from "../assets/JS.png";
 import ThemeToggle from "../components/ThemeToggle";
 import { navigation } from "../constants";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import useNavigation from "../hooks/useNavigation";
 
 const Header = () => {
   const pathname = useLocation();
-  const [openNavigation, setNavigation] = useState(false);
+  const { openNavigation, setNavigation } = useNavigation();
   const toggleNavigation = () => {
     if (openNavigation) {
       setNavigation(false);

@@ -1,10 +1,12 @@
 import Section from "./Section";
 import useText from "../hooks/useText";
 import Typewriter from "typewriter-effect";
-import Portfolio from "../assets/Portfolio.png";
+import Profile from "../assets/Portfolio.png";
+import useNavigation from "../hooks/useNavigation";
 
 const Hero = () => {
   const { animateOnLoad } = useText();
+  const { openNavigation } = useNavigation();
 
   return (
     <Section
@@ -14,8 +16,16 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      <div className="container relative mt-96 lg:mt-60">
+      <div
+        className={`container ${openNavigation ? " mt-96" : "mt-20"} relative lg:mt-20`}
+      >
         <div className="relative z-1 max-w-5xl mx-auto text-center mb-16 md:mb-20  lg:mb:[6rem] ">
+          <div>
+            <img
+              src={Profile}
+              className="h-60 w-60 rounded-full mx-auto border border-slate-400 drop-shadow-lg"
+            />
+          </div>
           <h1
             className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h1 mb-6`}
           >
