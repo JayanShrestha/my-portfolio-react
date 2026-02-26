@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <div
-      className={`flex fixed top-0 left-0 z-50  border-b light:border-slate-200 dark:border-n-6 lg:backdrop-blur-sm $ w-full justify-evenly`}
+      className={`flex fixed top-0 left-0 z-50 border-b border-slate-200 dark:border-n-6 dark:bg-n-8  w-full justify-evenly`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="/">
@@ -46,7 +46,7 @@ const Header = () => {
         <div className="relative z-2 flex flex-col items-center mx-auto mt-6 lg:flex-row">
           <a
             href="/"
-            className={`block relative font-code text-2xl uppercase ${pathname.hash === "" ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2" : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"} hover:text-color-1 transition-colors px-6 py-4 lg:-mr-0.5 lg:text-xs lg:font-semibold active:text-color-1`}
+            className={`block relative font-code text-2xl uppercase hover:scale-105 ${pathname.hash === "" ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2" : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"} hover:text-color-1 transition-colors px-6 py-4 lg:-mr-0.5 lg:text-xs lg:font-semibold active:text-color-1`}
           >
             Home
           </a>
@@ -55,7 +55,7 @@ const Header = () => {
               onClick={handleclick}
               key={item.id}
               href={item.url}
-              className={`block relative font-code text-2xl uppercase transition-colors hover:text-color-1 ${item.OnlyMobile ? "lg:hidden" : ""}px-6 py-4  lg:-mr-0.5 lg:text-xs lg:font-semibold ${
+              className={`block relative font-code text-2xl uppercase transition-colors hover:scale-105 hover:text-color-1 ${item.OnlyMobile ? "lg:hidden" : ""}px-6 py-4  lg:-mr-0.5 lg:text-xs lg:font-semibold ${
                 item.url === pathname.hash
                   ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2 "
                   : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"

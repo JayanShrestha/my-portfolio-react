@@ -7,15 +7,18 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundSize:{
+        '200':'200% 200%',
+      },
       keyframes: {
-        gradientMove: {
+        'gradient-animation': {
           "0%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
         },
       },
       animation: {
-        gradient: "gradientMove 3s ease infinite",
+        'gradient-animation': "gradient-animation 3s ease-in-out infinite",
       },
 
       colors: {

@@ -30,6 +30,13 @@
     @apply font-sans text-base antialiased;
   }
 }
+/*class for background animation*/
+.gradient-animation{
+  @apply rounded-2xl p-8 border;
+   background: linear-gradient(to bottom right,rgb(168 85 247 / 0.2),rgb(124 58 237 / 0.2));
+   background-size: 300% 300%;
+  animation: gradient-animation 1s ease-in-out infinite;
+}
 
 /* Optional rotation utilities for decorative elements */
 .rotate-45 {
@@ -79,4 +86,19 @@
 }
 .-rotate-360 {
   @apply rotate-[-360deg];
+}
+
+
+
+/*background animation*/
+@keyframes gradient-animation{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
