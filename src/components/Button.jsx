@@ -1,8 +1,8 @@
 import ButtonSvg from "../assets/assets/svg/ButtonSvg";
 
 const Button = (props) => {
-  const classes = `button text-sm relative items-center justify-center h-11 transition-colors dark:hover:text-color-1 text-slate-900 dark:text-n-1 ${props.px || "px-1"} ${props.white ? "text-n-1" : "text-n-8"} ${props.className || ""}`;
-  const spanClasses = "relative z-10";
+  const classes = `button text-sm relative flex items-center justify-center h-11 transition-colors hover:scale-105 dark:hover:text-color-1 text-slate-900 dark:text-n-1 ${props.px || "px-1"} ${props.white ? "text-n-1" : "text-n-8"} ${props.className || ""}`;
+  const spanClasses = "relative z-10 p-5";
   const renderButton = () => (
     <button className={classes} onClick={props.onClick}>
       <span>{props.children}</span>
@@ -10,7 +10,7 @@ const Button = (props) => {
     </button>
   );
   const renderLink = () => (
-    <a href={props.href} className={classes}>
+    <a href={props.href} className={`mt-5 hover:scale-105 ${classes}`} target={props.target}>
       <span className={spanClasses}>{props.children}</span>
       {ButtonSvg(props.white)}
     </a>
