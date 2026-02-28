@@ -31,11 +31,16 @@
   }
 }
 /*class for background animation*/
-.gradient-animation{
-  @apply rounded-2xl p-8 border;
-   background: linear-gradient(to bottom right,rgb(168 85 247 / 0.2),rgb(124 58 237 / 0.2));
-   background-size: 300% 300%;
-  animation: gradient-animation 1s ease-in-out infinite;
+.gradient-animation {
+  @apply border;
+  background: linear-gradient(
+    to bottom right,
+    rgb(172 106 255/ 0.2),
+    rgb(133 141 255/ 0.2),
+    rgb(255 152 226)
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 3s ease-in-out infinite;
 }
 
 /* Optional rotation utilities for decorative elements */
@@ -88,10 +93,8 @@
   @apply rotate-[-360deg];
 }
 
-
-
 /*background animation*/
-@keyframes gradient-animation{
+@keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
   }
