@@ -10,7 +10,11 @@ const Button = (props) => {
     </button>
   );
   const renderLink = () => (
-    <a href={props.href} className={`mt-5 hover:scale-105 ${classes}`} target={props.target}>
+    <a
+      href={props.href}
+      className={`mt-5 hover:scale-105  ${classes}`}
+      target={props.target}
+    >
       <span className={spanClasses}>{props.children}</span>
       {ButtonSvg(props.white)}
     </a>
