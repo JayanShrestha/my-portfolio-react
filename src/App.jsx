@@ -1,14 +1,21 @@
 import ButtonGradient from "./assets/assets/svg/ButtonGradient";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Aboutme from "./components/Aboutme";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+
 function App() {
   return (
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
-        <Hero />
-        <Aboutme />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+              </>
+            }
+          />
+        </Routes>
       </div>
 
       <ButtonGradient />
