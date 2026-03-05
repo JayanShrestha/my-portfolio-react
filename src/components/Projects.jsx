@@ -1,7 +1,8 @@
 import Section from "./Section";
-import Button from "./Button";
 import { projects } from "../constants";
-import Domainrank from "../assets/DomainRank.png";
+import Card from "./Card";
+import { BriefcaseBusinessIcon } from "lucide-react";
+import { View } from "lucide-react";
 
 const Projects = () => {
   return (
@@ -13,22 +14,53 @@ const Projects = () => {
       id="projects"
     >
       <div className="container mt-24">
-        <div className="h1 mb-6 flex">
-          <span className="mx-auto">My Projects</span>
+        <div className="h2 font-bold mb-6 flex">
+          <span className="flex flex-wrap items-center">
+            <p className="pr-2">Featured Projects {`   `}</p>
+            <span className="md:hidden">
+              <BriefcaseBusinessIcon size={32} />
+            </span>
+            <span className="hidden md:block">
+              <BriefcaseBusinessIcon size={42} />
+            </span>
+          </span>
         </div>
 
-        <div className="relative grid mt-6 md:grid-cols-3 gap-6 text-center">
+        <div className="relative mt-16 grid md:grid-cols-2 gap-12 ">
           {projects.map((item, index) => {
             return (
-              <div key={index} className="flex flex-wrap flex-col items-center">
-                <img
-                  className="h-64
-                   w-128"
-                  src={Domainrank}
-                  alt="domain ranking app"
-                />
-                <div>{item.title}</div>
-              </div>
+              <Card id={index}>
+                <div className="flex flex-wrap flex-col">
+                  <p className="h6 body-1"> {item.title}</p>
+                  <p className="text-n-8/50 dark:text-n-1/50">
+                    {item.description}
+                  </p>
+                  <div className="flex flex-wrap justify-between py-3">
+                    {item.tech.map((item) => {
+                      return (
+                        <span className="border border-color-1 p-2 rounded-2xl text-color-1 text-sm">
+                          {item}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  <div className="flex py-2">
+                    <div className="flex flex-col justify-between items-center sm:flex-row max-w-lg">
+                      {" "}
+                      <div className="flex flex-wrap justify-center items-center">
+                        <View />
+                        <a
+                          className="pl-2 hover:text-n-1"
+                          href={item.url}
+                          target="_blank"
+                        >
+                          View Project Demo
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
             );
           })}
         </div>
