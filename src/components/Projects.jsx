@@ -3,17 +3,20 @@ import { projects } from "../constants";
 import Card from "./Card";
 import { BriefcaseBusinessIcon } from "lucide-react";
 import { View } from "lucide-react";
+import useText from "../hooks/useText";
 
 const Projects = () => {
+  const { animateOnLoad } = useText();
   return (
     <Section
-      className="pt-48 "
       crosses
       crossesOffset="lg:translate-y-20"
       customPaddings
       id="projects"
     >
-      <div className="container mt-24">
+      <div
+        className={`container transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+      >
         <div className="h2 font-bold mb-6 flex">
           <span className="flex flex-wrap items-center">
             <p className="pr-2">Featured Projects {`   `}</p>
@@ -26,7 +29,7 @@ const Projects = () => {
           </span>
         </div>
 
-        <div className="relative mt-16 grid md:grid-cols-2 gap-12 ">
+        <div className="relative grid md:grid-cols-2 gap-12 ">
           {projects.map((item, index) => {
             return (
               <Card id={index}>
@@ -38,7 +41,7 @@ const Projects = () => {
                   <div className="flex flex-wrap justify-between py-3">
                     {item.tech.map((item) => {
                       return (
-                        <span className="border border-color-1 p-2 rounded-2xl text-color-1 text-sm">
+                        <span className="border border-color-1 p-2 m-2 rounded-2xl text-color-1 text-sm">
                           {item}
                         </span>
                       );

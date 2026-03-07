@@ -1,6 +1,7 @@
 import ButtonGradient from "./assets/assets/svg/ButtonGradient";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import ContactMe from "./pages/ContactMe";
 
 function App() {
   return (
@@ -12,6 +13,14 @@ function App() {
             element={
               <>
                 <Home />
+              </>
+            }
+          />
+          <Route
+            path="/contactme"
+            element={
+              <>
+                <ContactMe />
               </>
             }
           />

@@ -44,7 +44,7 @@ export const projects = [
     url: "https://jayanshrestha.com/",
     description:
       "A portfolio created using React and tailwind css with custom hooks. It showcases the projects, experiences and education. This project was deployed on Cloudflare PaaS which performs CI/CD on each repo update and deployement.",
-    tech: ["React", "Tailwind CSS"],
+    tech: ["React", "Tailwind CSS", "Figma", "CloudFlare"],
   },
   {
     id: "3",
@@ -52,6 +52,6 @@ export const projects = [
     url: "https://keeper.jayanshrestha.com/",
     description:
       "A keeper application that uses React UseState to add the notes on Single Page Application. The notes can be deleted and added from the Input box.",
-    tech: ["React", "Tailwind CSS"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Figma"],
   },
 ];

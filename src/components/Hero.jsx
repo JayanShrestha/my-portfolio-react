@@ -40,7 +40,7 @@ const Hero = () => {
               }}
               options={{
                 strings: [
-                  "Sydney based Full Stack Web Developer",
+                  "A T-Shaped Full Stack Web Developer",
                   "M.Tech in Software Engineering",
                   "Freelance Frontend Developer at Au Tech Jobs",
                 ],
@@ -54,7 +54,9 @@ const Hero = () => {
               "Building high-performance web applications with modern architectures. Focusing on scalability, developer experience, and pixel-perfect user interfaces."
             }
           </p>
-          <div className="flex flex-col justify-between sm:flex-row max-w-lg">
+          <div
+            className={`flex flex-col justify-between sm:flex-row max-w-lg transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} `}
+          >
             <Button href="https://github.com/JayanShrestha" target="_blank">
               <div className="flex flex-wrap justify-center items-center">
                 <Github />
