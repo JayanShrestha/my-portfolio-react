@@ -2,8 +2,10 @@ import Section from "./Section";
 import Button from "./Button";
 import Portfolio from "../assets/Portfolio.png";
 import { Info } from "lucide-react";
+import useText from "../hooks/useText";
 
 const Aboutme = () => {
+  const { animateOnLoad } = useText();
   return (
     <Section
       className="pt-48 "
@@ -13,7 +15,7 @@ const Aboutme = () => {
       id="aboutme"
     >
       <div
-        className={`container mt-24 lg:mt-32 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center`}
+        className={`container mt-24 lg:mt-32 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
       >
         <div className="relative z-1 max-w-5xl mx-auto mb-16 md:mb-8">
           <h1 className={`h2 font-bold mb-6 flex flex-wrap items-center`}>
