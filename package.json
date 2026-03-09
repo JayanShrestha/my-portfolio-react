@@ -11,12 +11,10 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "env": "^0.0.2",
     "lucide-react": "^0.575.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.0",
-    "resend": "^6.9.3",
     "scroll-lock": "^2.1.5",
     "typewriter-effect": "^2.22.0"
   },
