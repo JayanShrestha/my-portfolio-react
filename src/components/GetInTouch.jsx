@@ -6,13 +6,40 @@ import {
   Github,
   Linkedin,
   Projector,
+  CloudLightning,
 } from "lucide-react";
 import Section from "../components/Section";
 import useText from "../hooks/useText";
 import Button from "./Button";
+import { useState } from "react";
 
 const GetInTouch = () => {
   const { animateOnLoad } = useText();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const res = await fetch("/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      if (!res.ok) {
+        throw new Error("Failed to send");
+      }
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+  };
   return (
     <Section
       className="pt-48"
@@ -37,8 +64,8 @@ const GetInTouch = () => {
         </div>
 
         <div className="grid md:grid-flow-col md:grid-cols-[70%,30%] mt-16 gap-8">
-          <form>
-            <div className="container grid dark:bg-n-5 bg-slate-100 border-none rounded-2xl p-8  dark:text-slate-200 ">
+          <form onSubmit={handleSubmit}>
+            <div className="container grid dark:bg-n-7 bg-slate-100 border-none rounded-2xl p-8  dark:text-slate-200 ">
               <h2 className="h5 font-bold">Send a Message</h2>
               <div className="Input mt-5">
                 <div className="name grid md:grid-cols-2 gap-8">
@@ -86,10 +113,14 @@ const GetInTouch = () => {
                     placeholder="Tell me about your project or idea..."
                   ></textarea>
                 </div>
-                <Button className="mt-5">
+                <Button className="mt-5" type="submit" onClick={handleSubmit}>
                   <div className="flex flex-wrap p-2">
                     <Send />
-                    <span className="pl-2">Send Message</span>
+                    <span className="pl-2">
+                      {status === null ? "Send Message" : ""}
+                      {status === "loading" ? "Loading" : ""}
+                      {status === "success" ? "success" : ""}
+                    </span>
                   </div>
                 </Button>
               </div>
@@ -97,10 +128,10 @@ const GetInTouch = () => {
           </form>
 
           <div className="flex flex-col">
-            <div className="contactInfo container grid grid-flow-row dark:bg-n-5 bg-slate-100 border-none rounded-2xl p-8  dark:text-slate-200 h-fit">
+            <div className="contactInfo container grid grid-flow-row dark:bg-n-7 bg-slate-100 border-none rounded-2xl p-8  dark:text-slate-200 h-fit">
               <h2 className="h5 font-bold">Contact Information</h2>
               <div className="mt-5">
-                <div classname="flex flex-col item-center justify-center ">
+                <div className="flex flex-col item-center justify-center ">
                   <div className="flex p-2">
                     <span>
                       <Mail />
@@ -113,7 +144,7 @@ const GetInTouch = () => {
                     </div>
                   </div>
                 </div>
-                <div classname="flex flex-col item-center justify-center ">
+                <div className="flex flex-col item-center justify-center ">
                   <div className="flex p-2">
                     <span>
                       <MapMinusIcon />
@@ -126,7 +157,7 @@ const GetInTouch = () => {
                     </div>
                   </div>
                 </div>
-                <div classname="flex flex-col item-center justify-center">
+                <div className="flex flex-col item-center justify-center">
                   <div className="flex p-2">
                     <span>
                       <CalendarCheck />
@@ -135,13 +166,13 @@ const GetInTouch = () => {
                       <span className="text-n-5 dark:text-n-3 text-sm">
                         Avaibility
                       </span>
-                      <span>jayanshrestha055@gmail.com</span>
+                      <span>Open to opportunities</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="contactInfo container grid grid-flow-row dark:bg-n-5 bg-slate-100 border-none rounded-2xl p-8  dark:text-slate-200 h-fit mt-8">
+            <div className="contactInfo container grid grid-flow-row dark:bg-n-7 bg-slate-100 border-none rounded-2xl p-8  dark:text-slate-200 h-fit mt-8">
               <h2 className="h5 font-bold">Connect With Me</h2>
               <div className="mt-5">
                 <div
@@ -173,6 +204,19 @@ const GetInTouch = () => {
                     </div>
                   </Button>
                 </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-[20%,80%] items-start justify-center mt-8 bg-slate-100 dark:bg-n-5 p-5 border-none rounded-2xl">
+              <span className="pt-2 pl-5">
+                <CloudLightning />
+              </span>
+
+              <div className="flex flex-col items-start justify-center">
+                <h2 className="h6 font-bold">Quick Response</h2>
+                <span className="text-n-4">
+                  I typically respond within 24 hours. Looking forward to
+                  connecting with you!
+                </span>
               </div>
             </div>
           </div>
