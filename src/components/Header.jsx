@@ -39,33 +39,36 @@ const Header = () => {
           ></img>
         </a>
       </div>
-
-      <nav
-        className={`${openNavigation ? "flex h-fit  drop-shadow-md shadow-black  dark:bg-n-8/50 mt-8 translate-x-0 backdrop-blur-md" : "h-fit -translate-x-full lg:translate-x-0 mt-8"} fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent transition-all duration-300 ease-in-out `}
+      <div
+        className={`${pathname.pathname === "/contactme" || pathname.pathname === "/blog" ? `hidden` : ""}`}
       >
-        <div className="relative z-2 flex flex-col items-center mx-auto mt-6 lg:flex-row">
-          <a
-            href="/"
-            className={`block relative font-code text-2xl uppercase hover:scale-105 ${pathname.hash === "" ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2" : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"} hover:text-color-1 transition-colors px-6 py-4 lg:-mr-0.5 lg:text-xs lg:font-semibold active:text-color-1`}
-          >
-            Home
-          </a>
-          {navigation.map((item) => (
+        <nav
+          className={`${openNavigation ? "flex h-fit  drop-shadow-md shadow-black  dark:bg-n-8/50 mt-8 translate-x-0 backdrop-blur-md" : "h-fit -translate-x-full lg:translate-x-0 mt-8"}  fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent transition-all duration-300 ease-in-out `}
+        >
+          <div className="relative z-2 flex flex-col items-center mx-auto mt-6 lg:flex-row">
             <a
-              onClick={handleclick}
-              key={item.id}
-              href={item.url}
-              className={`block relative font-code text-2xl uppercase transition-colors hover:scale-105 hover:text-color-1 ${item.OnlyMobile ? "lg:hidden" : ""}px-6 py-4  lg:-mr-0.5 lg:text-xs lg:font-semibold ${
-                item.url === pathname.hash
-                  ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2 "
-                  : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"
-              } lg:leading-5  xl:px-12`}
+              href="/"
+              className={`block relative font-code text-2xl uppercase hover:scale-105 ${pathname.hash === "" ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2" : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"} hover:text-color-1 transition-colors px-6 py-4 lg:-mr-0.5 lg:text-xs lg:font-semibold active:text-color-1`}
             >
-              {item.title}
+              Home
             </a>
-          ))}
-        </div>
-      </nav>
+            {navigation.map((item) => (
+              <a
+                onClick={handleclick}
+                key={item.id}
+                href={item.url}
+                className={`block relative font-code text-2xl uppercase transition-colors hover:scale-105 hover:text-color-1 ${item.OnlyMobile ? "lg:hidden" : ""}px-6 py-4  lg:-mr-0.5 lg:text-xs lg:font-semibold ${
+                  item.url === pathname.hash
+                    ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2 "
+                    : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"
+                } lg:leading-5  xl:px-12`}
+              >
+                {item.title}
+              </a>
+            ))}
+          </div>
+        </nav>
+      </div>
       <ThemeToggle className="m-auto px-1 lg:px-7" />
 
       <div className="flex items-center justify-end mr-4 lg:hidden">
