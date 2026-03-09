@@ -21,24 +21,7 @@ const GetInTouch = () => {
   const [status, setStatus] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("loading");
-    try {
-      const res = await fetch("/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
-      if (!res.ok) {
-        throw new Error("Failed to send");
-      }
-      setStatus("success");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-    }
+    console.log(e.target.name.value);
   };
   return (
     <Section
@@ -113,7 +96,7 @@ const GetInTouch = () => {
                     placeholder="Tell me about your project or idea..."
                   ></textarea>
                 </div>
-                <Button className="mt-5" type="submit" onClick={handleSubmit}>
+                <Button className="mt-5" type="submit">
                   <div className="flex flex-wrap p-2">
                     <Send />
                     <span className="pl-2">
