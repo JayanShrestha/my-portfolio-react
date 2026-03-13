@@ -21,7 +21,17 @@ const GetInTouch = () => {
   const [status, setStatus] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e.target.name.value);
+    console.log(e.target.value);
+    const name = e.target.name.value;
+    const email = e.target.name.value;
+    const message = e.target.name.value;
+    setName(name);
+    setEmail(email);
+    setMessage(message);
+    setStatus("loading");
+    setTimeout(() => {
+      setStatus("success");
+    }, 2000);
   };
   return (
     <Section
