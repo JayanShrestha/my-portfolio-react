@@ -6,14 +6,14 @@ const Footer = () => {
       <div className="flex flex-wrap flex-col items-center justify-center p-2">
         <div className="flex flex-wrap items-center justify-center py-2">
           <a
-            className="px-5"
+            className="px-5 hover:scale-125 hover:bg-color-1 rounded-2xl"
             href="https://github.com/JayanShrestha"
             target="_blank"
           >
             <Github />
           </a>
           <a
-            className="px-5"
+            className="px-5 hover:scale-125 hover:bg-color-1 rounded-2xl"
             href="https://www.linkedin.com/in/jayan-shrestha/"
             target="_blank"
           >
@@ -22,7 +22,7 @@ const Footer = () => {
           </a>
 
           <a
-            className="px-5"
+            className="px-5 hover:scale-125 hover:bg-color-1 rounded-2xl"
             href="mailto:jayanshrestha055@gmail.com"
             target="_blank"
           >
