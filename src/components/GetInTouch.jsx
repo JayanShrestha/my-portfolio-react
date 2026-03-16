@@ -7,31 +7,48 @@ import {
   Linkedin,
   Projector,
   CloudLightning,
+  CircleCheck,
 } from "lucide-react";
 import Section from "../components/Section";
 import useText from "../hooks/useText";
 import Button from "./Button";
 import { useState } from "react";
+import { ContactApi } from "../api/ContactApi";
 
 const GetInTouch = () => {
   const { animateOnLoad } = useText();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [body, setBody] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setBody((prevalue) => {
+      return {
+        ...prevalue, //previous held values for all parts of body such as name, email, subject and message
+        [name]: value, //same name of the object to change values
+      };
+    });
+  }
   const [status, setStatus] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e.target.value);
-    const name = e.target.name.value;
-    const email = e.target.name.value;
-    const message = e.target.name.value;
-    setName(name);
-    setEmail(email);
-    setMessage(message);
+    setBody(() => {
+      return {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      };
+    });
     setStatus("loading");
     setTimeout(() => {
       setStatus("success");
     }, 2000);
+    ContactApi(body);
   };
   return (
     <Section
@@ -71,6 +88,8 @@ const GetInTouch = () => {
                       type="text"
                       id="name"
                       placeholder="Your name"
+                      onChange={handleChange}
+                      value={body.name}
                     />
                   </div>
                   <div className="flex flex-wrap flex-col">
@@ -82,6 +101,8 @@ const GetInTouch = () => {
                       type="email"
                       id="email"
                       placeholder="your.email@example.com"
+                      onChange={handleChange}
+                      value={body.email}
                     />
                   </div>
                 </div>
@@ -93,6 +114,8 @@ const GetInTouch = () => {
                     name="subject"
                     id="subject"
                     placeholder="What's this about?"
+                    onChange={handleChange}
+                    value={body.subject}
                   />
                 </div>
                 <div className="flex flex-wrap flex-col mt-5">
@@ -104,15 +127,43 @@ const GetInTouch = () => {
                     name="message"
                     id="message"
                     placeholder="Tell me about your project or idea..."
+                    onChange={handleChange}
+                    value={body.message}
                   ></textarea>
                 </div>
-                <Button className="mt-5" type="submit">
-                  <div className="flex flex-wrap p-2">
-                    <Send />
+                <Button
+                  className={`mt-5 ${
+                    status === "success"
+                      ? `bg-color-1 border-none rounded-2xl text-slate-200`
+                      : ``
+                  }`}
+                  type="submit"
+                >
+                  <div className="flex flex-wrap p-2 ">
+                    <div
+                      className={
+                        status === "loading"
+                          ? `hidden`
+                          : `${status === "success" ? `hidden` : ``}`
+                      }
+                    >
+                      <Send />
+                    </div>
+                    <div className={status === "success" ? `block` : `hidden`}>
+                      <CircleCheck />
+                    </div>
+
                     <span className="pl-2">
                       {status === null ? "Send Message" : ""}
-                      {status === "loading" ? "Loading" : ""}
-                      {status === "success" ? "success" : ""}
+                      {status === "loading" ? (
+                        <div>
+                          <div class="h-6 w-6 animate-spin rounded-full border-4 border-color-1 border-t-transparent"></div>
+                          <p>Sending</p>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                      {status === "success" ? <p>Success</p> : ""}
                     </span>
                   </div>
                 </Button>
