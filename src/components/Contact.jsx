@@ -13,9 +13,9 @@ const Contact = () => {
       id="contact"
     >
       <div
-        className={`container transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "}`}
+        className={`container mt-24 lg:mt-32 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "}`}
       >
-        <div className="flex flex-wrap items-center justify-center md:pt-48 pt-16">
+        <div className="flex flex-wrap items-center justify-center md:pt-16 pt-24">
           <h1 className="h1 text-center">Let's Work Together</h1>
           <div className="md:p-16">
             {" "}
