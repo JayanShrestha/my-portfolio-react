@@ -9,13 +9,14 @@ const Projects = () => {
   const { animateOnLoad } = useText();
   return (
     <Section
+      className="pt-48"
       crosses
       crossesOffset="lg:translate-y-20"
       customPaddings
       id="projects"
     >
       <div
-        className={`container transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+        className={`container mt-24 lg:mt-32 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
       >
         <div className="h2 font-bold mb-6 flex">
           <span className="flex flex-wrap items-center">

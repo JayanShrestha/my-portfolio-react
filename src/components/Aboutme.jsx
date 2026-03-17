@@ -31,7 +31,7 @@ const Aboutme = () => {
             className={`body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
             {
-              "Hi, I am Full-stack software engineer with over 1 years of experience specializing in mostly Frontend (React, Vue) and Backend (Node/Express). Currently, I am living in Sydney, Australia working as a frontend developer in AutechJobs. I am deeply passionate about solving problems by building scalable web applicaitons. When I am not working, you can usually find me in gym or binging Netflix :)."
+              "Hi, I am Full-stack software engineer specializing in mostly Frontend (React, Vue) and Backend (Node/Express). Currently, I am living in Sydney, Australia working as a frontend developer in AutechJobs. I am deeply passionate about solving problems by building scalable web applicaitons. When I am not working, you can usually find me in gym or binging Netflix :)."
             }
           </p>
           <div className="flex flex-col justify-between sm:flex-row max-w-lg">

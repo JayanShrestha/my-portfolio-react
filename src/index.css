@@ -43,6 +43,11 @@
   animation: gradient-animation 3s ease-in-out infinite;
 }
 
+/* adjust the height of scrolling through id of elements*/
+[id] {
+  scroll-margin-top: 150px; /* adjust to your navbar height */
+}
+
 /* Optional rotation utilities for decorative elements */
 .rotate-45 {
   @apply rotate-[45deg];
