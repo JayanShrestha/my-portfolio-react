@@ -32,7 +32,7 @@ const Blog = () => {
             return (
               <Card id={index}>
                 <div className="flex flex-wrap flex-col">
-                  <p className="border-none rounded-2xl bg-color-1/50 w-fit p-2 ">
+                  <p className="border-none rounded-2xl bg-color-1/50 w-fit p-2 text-slate-100 ">
                     {item.category}
                   </p>
                   <p className="h6 mt-2"> {item.title}</p>
