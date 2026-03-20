@@ -17,7 +17,7 @@ const Blog = () => {
       id="Blog"
     >
       <div
-        className={`container mt-24 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} mb-48`}
+        className={`container mt-8 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} mb-48`}
       >
         <div className="flex flex-wrap flex-col gap-4 p-24 md:p-16">
           <h1 className="h1">Blog</h1>
