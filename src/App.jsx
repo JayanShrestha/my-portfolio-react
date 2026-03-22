@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ContactMe from "./pages/ContactMe";
 import BlogPage from "./pages/BlogPage";
+import BlogPost from "./pages/BlogPost";
 
 function App() {
   return (
@@ -30,6 +31,14 @@ function App() {
             element={
               <>
                 <BlogPage />
+              </>
+            }
+          />
+          <Route
+            path="/blog/:id"
+            element={
+              <>
+                <BlogPost />
               </>
             }
           />

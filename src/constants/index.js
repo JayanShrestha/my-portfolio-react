@@ -55,25 +55,3 @@ export const projects = [
     tech: ["React", "TypeScript", "Tailwind CSS", "Figma"],
   },
 ];
-
-export const blogs = [
-  {
-    id: "0",
-    title:
-      "Using RESEND API to create a simple email service in Node/Express JS",
-    excerpt:
-      "While working on contact me page for my portfolio, I came across RESEND API services for developers which provide simple email services across multiple platforms.",
-    date: "March 19th, 2026",
-    readTime: "5 min read",
-    category: "Node/Express JS",
-  },
-  {
-    id: "1",
-    title: "Creating Reusable components for React Project for multiple usage",
-    excerpt:
-      "Another time saving factor while working on React Project is creating reusable components which can used multiple without hardcoding the same code over and over.",
-    date: "March 12th, 2026",
-    readTime: "8 min read",
-    category: "React JS",
-  },
-];
