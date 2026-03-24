@@ -12,6 +12,7 @@ const Posts = () => {
   const post = blog_post.filter((item) => {
     return pathname.pathname === item.url;
   });
+
   return (
     <Section
       className="pt-48"

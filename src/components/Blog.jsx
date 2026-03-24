@@ -8,6 +8,9 @@ import Button from "./Button";
 
 const Blog = () => {
   const { animateOnLoad } = useText();
+  const handleClick = (url) => {
+    return window.open(url, "_self");
+  };
   return (
     <Section
       className="pt-48"
@@ -31,7 +34,10 @@ const Blog = () => {
           {blog_post.map((item, index) => {
             return (
               <Card id={index}>
-                <div className="flex flex-wrap flex-col">
+                <div
+                  className="flex flex-wrap flex-col"
+                  onClick={() => handleClick(item.url)}
+                >
                   <p className="border-none rounded-2xl bg-color-1/50 w-fit p-2 text-slate-100 ">
                     {item.category}
                   </p>
