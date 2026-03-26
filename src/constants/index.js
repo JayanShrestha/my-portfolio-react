@@ -7,6 +7,7 @@ export const navigation = [
     id: "0",
     title: "Projects",
     url: "#projects",
+    surl: "/#projects",
   },
   {
     id: "1",
@@ -17,11 +18,13 @@ export const navigation = [
     id: "2",
     title: "About me",
     url: "#aboutme",
+    surl: "/#aboutme",
   },
   {
     id: "3",
     title: "Contact",
     url: "#contact",
+    surl: "/#contact",
   },
 ];
 
