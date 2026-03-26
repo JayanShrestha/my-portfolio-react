@@ -43,7 +43,7 @@ const Projects = () => {
                     {item.description}
                     <img
                       src={item.image}
-                      className="border-none rounded-2xl py-2 h-64"
+                      className="border-none rounded-2xl py-2 h-32 sm:h-64 w-full"
                       alt="DomainRankApp Image"
                     />
                   </p>
