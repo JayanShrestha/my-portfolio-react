@@ -2,6 +2,9 @@ import ButtonGradient from "./assets/assets/svg/ButtonGradient";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ContactMe from "./pages/ContactMe";
+import BlogPage from "./pages/BlogPage";
+import BlogPost from "./pages/BlogPost";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -17,10 +20,34 @@ function App() {
             }
           />
           <Route
+            path="/aboutme"
+            element={
+              <>
+                <AboutPage />
+              </>
+            }
+          />
+          <Route
             path="/contactme"
             element={
               <>
                 <ContactMe />
+              </>
+            }
+          />
+          <Route
+            path="/blog"
+            element={
+              <>
+                <BlogPage />
+              </>
+            }
+          />
+          <Route
+            path="/blog/:id"
+            element={
+              <>
+                <BlogPost />
               </>
             }
           />

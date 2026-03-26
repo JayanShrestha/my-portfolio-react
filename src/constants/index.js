@@ -7,7 +7,7 @@ export const navigation = [
   {
     id: "1",
     title: "Blog",
-    url: "#blog",
+    url: "/blog",
   },
   {
     id: "2",
@@ -29,6 +29,7 @@ export const projects = [
     description:
       "A full-stack web app that visualizes Tranco domain rankings over time. Built with Vue.js, Tailwind CSS, and Chart.js, it allows users to input one or multiple domains and view their ranking history in a responsive chart.",
     tech: ["Vue", "Tailwind CSS", "Chart JS ", "Nest JS", "Neon PostgreSQL"],
+    image: "./src/assets/Projects/DomainRank.png",
   },
   {
     id: "1",

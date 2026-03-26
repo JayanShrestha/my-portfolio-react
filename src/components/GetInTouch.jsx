@@ -5,7 +5,6 @@ import {
   CalendarCheck,
   Github,
   Linkedin,
-  Projector,
   CloudLightning,
   CircleCheck,
 } from "lucide-react";

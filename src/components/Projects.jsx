@@ -7,6 +7,9 @@ import useText from "../hooks/useText";
 
 const Projects = () => {
   const { animateOnLoad } = useText();
+  const handleClick = (url) => {
+    return window.open(url, "_blank", "noreferrer");
+  };
   return (
     <Section
       className="pt-48"
@@ -34,10 +37,18 @@ const Projects = () => {
           {projects.map((item, index) => {
             return (
               <Card id={index}>
-                <div className="flex flex-wrap flex-col">
+                <div
+                  className="flex flex-wrap flex-col"
+                  onClick={() => handleClick(item.url)}
+                >
                   <p className="h6 body-1"> {item.title}</p>
                   <p className="text-n-8/50 dark:text-n-1/50">
                     {item.description}
+                    <img
+                      src={item.image}
+                      className="border-none rounded-2xl py-2"
+                      alt="DomainRankApp Image"
+                    />
                   </p>
                   <div className="flex flex-wrap justify-between py-3">
                     {item.tech.map((item) => {

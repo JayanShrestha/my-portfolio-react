@@ -39,9 +39,7 @@ const Header = () => {
           ></img>
         </a>
       </div>
-      <div
-        className={`${pathname.pathname === "/contactme" || pathname.pathname === "/blog" ? `hidden` : ""}`}
-      >
+      <div className={`${pathname.pathname !== "/" ? `hidden` : ""}`}>
         <nav
           className={`${openNavigation ? "flex h-fit  drop-shadow-md shadow-black  dark:bg-n-8/50 mt-8 translate-x-0 backdrop-blur-md" : "h-fit -translate-x-full lg:translate-x-0 mt-8"}  fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent transition-all duration-300 ease-in-out `}
         >
