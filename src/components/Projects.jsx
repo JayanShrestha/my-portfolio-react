@@ -1,15 +1,15 @@
 import Section from "./Section";
 import { projects } from "../constants";
 import Card from "./Card";
-import { BriefcaseBusinessIcon } from "lucide-react";
+import { BriefcaseBusinessIcon, Github } from "lucide-react";
 import { View } from "lucide-react";
 import useText from "../hooks/useText";
 
 const Projects = () => {
   const { animateOnLoad } = useText();
-  const handleClick = (url) => {
-    return window.open(url, "_blank", "noreferrer");
-  };
+  //const handleClick = (url) => {
+  //return window.open(url, "_blank", "noreferrer");
+  // };
   return (
     <Section
       className="pt-48"
@@ -37,16 +37,13 @@ const Projects = () => {
           {projects.map((item, index) => {
             return (
               <Card id={index}>
-                <div
-                  className="flex flex-wrap flex-col"
-                  onClick={() => handleClick(item.url)}
-                >
+                <div className="flex flex-wrap flex-col">
                   <p className="h6 body-1"> {item.title}</p>
                   <p className="text-n-8/50 dark:text-n-1/50">
                     {item.description}
                     <img
                       src={item.image}
-                      className="border-none rounded-2xl py-2"
+                      className="border-none rounded-2xl py-2 h-64"
                       alt="DomainRankApp Image"
                     />
                   </p>
@@ -62,15 +59,43 @@ const Projects = () => {
                   <div className="flex py-2">
                     <div className="flex flex-col justify-between items-center sm:flex-row max-w-lg">
                       {" "}
-                      <div className="flex flex-wrap justify-center items-center">
-                        <View />
-                        <a
-                          className="pl-2 hover:text-n-1"
-                          href={item.url}
-                          target="_blank"
-                        >
-                          View Project Demo
-                        </a>
+                      <div className="flex justify-center items-center">
+                        <span className="flex pl-2 hover:text-n-1">
+                          {" "}
+                          <View />
+                          <a href={item.url} target="_blank">
+                            View Demo
+                          </a>
+                        </span>
+
+                        <span className="flex pl-2">
+                          {item.repo ? (
+                            <a
+                              className="flex  hover:text-n-1"
+                              href={item.repo}
+                              target="_blank"
+                            >
+                              <Github /> View Repo
+                            </a>
+                          ) : (
+                            <span className="flex">
+                              <a
+                                className="flex  hover:text-n-1"
+                                href={item.frontendRepo}
+                              >
+                                <Github />
+                                Front-End Repo
+                              </a>
+                              <a
+                                className="flex pl-2  hover:text-n-1"
+                                href={item.backendRepo}
+                              >
+                                <Github />
+                                Back-End Repo
+                              </a>
+                            </span>
+                          )}
+                        </span>
                       </div>
                     </div>
                   </div>
