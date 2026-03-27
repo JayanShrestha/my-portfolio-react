@@ -147,7 +147,8 @@ const Aboutme = () => {
                   <li className="py-2">
                     <span className="dark:text-slate-100 font-bold underline">
                       {item.title}
-                    </span>{" "}
+                    </span>
+                    <br />
                     {item.date}
                   </li>
                   <li>
