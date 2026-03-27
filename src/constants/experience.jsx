@@ -4,7 +4,7 @@ export const experience = [
       "Volunteer Frontend Developer (Remote), AuTech Jobs, Sydney, Australia",
     date: "January 2025 – current",
     resp: [
-      "Delivered features using TDD, pair programming, and automated CI/CD pipelines, improving product stability and release speed resulting in 5211+ total users since Aug 2020 with 2,469 new users in 2024.",
+      "Delivered features using TDD, pair programming, and automated CI/CD pipelines, improving product stability and release speed resulting in 5211+ total users.",
       "Collaborated with cross-functional teams in an Agile environment, contributing to solution design, sprint planning, and iterative product improvements.",
       "Gained hands-on experience with Google Cloud Platform (GCP), utilizing Cloud Functions for serverless backend logic to build scalable and modular architectures.",
     ],
