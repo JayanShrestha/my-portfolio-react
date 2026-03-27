@@ -24,7 +24,7 @@ const Blog = () => {
       >
         <div className="flex flex-wrap flex-col gap-4 px-8 lg:px-4 md:p-16">
           <h1 className="h1">Blog</h1>
-          <p className="body-1">
+          <p className="body-1 text-n-4">
             Thoughts on software engineering/Web development, lessons learned,
             and technical deep-dives. I write challenges I face and the
             solutions I discover along the way.
