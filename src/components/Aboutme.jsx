@@ -206,7 +206,7 @@ const Aboutme = () => {
             <br />
             <br />
             {
-              "I enjoy builing high-performance, scalable web applications with modern architectures. My experience spans from crafting responsive frontend interfaces using React and Vue to engineering robust serverless backend deployment using Nest JS and Koyeb. I have experience in building API integration, expertise with JavaScript (TypeScript), and working with a Agile team."
+              "I enjoy building high-performance, scalable web applications with modern architectures. My experience spans from crafting responsive frontend interfaces using React and Vue to engineering robust serverless backend deployment using Nest JS and Koyeb. I have experience in building API integration, expertise with JavaScript (TypeScript), and working with a Agile team."
             }
             <br />
             <br />
