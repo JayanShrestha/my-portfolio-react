@@ -109,8 +109,8 @@ const Using_Resend_Api = () => {
             </li>
             <li>
               {" "}
-              • Start the app locally via "npm run start" or if your have
-              nodemon installed "nodemon index.js"
+              • Start the app locally via "npm run start" or if you have nodemon
+              installed "nodemon index.js"
             </li>
           </ul>
         </p>
@@ -221,7 +221,8 @@ const Using_Resend_Api = () => {
             Now, you have created the production-ready Node/Express JS backend
             running on Koyeb. This setup is simple and beginner friendly, and
             perfect to grasp the idea on how API works. You can use the live API
-            Url on SPA or mult-page application built on React or Next.{" "}
+            Url for your SPA or mult-page application built on React or Next
+            JS.{" "}
           </p>
         </div>
       </div>
