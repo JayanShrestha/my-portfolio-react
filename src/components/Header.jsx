@@ -56,7 +56,7 @@ const Header = () => {
               key={item.id}
               href={pathname.pathname === "/" ? item.url : item.surl}
               className={`block relative font-code text-2xl uppercase transition-colors hover:scale-105 hover:text-color-1 ${item.OnlyMobile ? "lg:hidden" : ""}px-6 py-4  lg:-mr-0.5 lg:text-xs lg:font-semibold ${
-                item.url === pathname.hash
+                item.url === pathname.hash || item.url === pathname.pathname
                   ? "z-2 lg:bg-color-1 lg:text-n-1 lg:hover:text-color-2 "
                   : "lg:text-slate-900 dark:lg:text-n-1/50 hover:text-color-1 dark:hover:text-color-1"
               } lg:leading-5  xl:px-12`}

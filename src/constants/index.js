@@ -13,6 +13,7 @@ export const navigation = [
     id: "1",
     title: "Blog",
     url: "/blog",
+    surl: "/blog",
   },
   {
     id: "2",
