@@ -5,10 +5,12 @@ import { useLocation } from "react-router-dom";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
+import useText from "../hooks/useText";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import useNavigation from "../hooks/useNavigation";
 
 const Header = () => {
+  const { animateOnLoad } = useText();
   const pathname = useLocation();
   const { openNavigation, setNavigation } = useNavigation();
   const toggleNavigation = () => {
@@ -28,9 +30,9 @@ const Header = () => {
 
   return (
     <div
-      className={`flex fixed top-0 left-0 z-50 border-b border-slate-200 dark:border-n-6 bg-n-1 dark:bg-n-8  w-full justify-evenly`}
+      className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0 flex fixed top-0 left-0 z-50 border-b border-slate-200 dark:border-n-6 bg-n-1 dark:bg-n-8  w-full justify-evenly" : "opacity-0 translate-y-4 "}`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <div className={`flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4`}>
         <a className="block w-[12rem] xl:mr-8" href="/">
           <img
             className="dark:invert w-20 h-20"
