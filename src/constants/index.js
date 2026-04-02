@@ -11,18 +11,24 @@ export const navigation = [
   },
   {
     id: "1",
+    title: "Skills",
+    url: "#skills",
+    surl: "/#skills",
+  },
+  {
+    id: "2",
     title: "Blog",
     url: "/blog",
     surl: "/blog",
   },
   {
-    id: "2",
+    id: "3",
     title: "About me",
     url: "#aboutme",
     surl: "/#aboutme",
   },
   {
-    id: "3",
+    id: "4",
     title: "Contact",
     url: "#contact",
     surl: "/#contact",
