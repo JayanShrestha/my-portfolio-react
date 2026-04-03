@@ -18,8 +18,8 @@ export const blog_post = [
     title: "Creating Reusable components for React Project for multiple usage",
     excerpt:
       "Another time saving factor while working on React Project is creating reusable components which can used multiple without hardcoding the same code over and over. Components are dynamic with the help of props.",
-    date: "March 12th, 2026",
-    readTime: "8 min read",
+    date: "April 3rd, 2026",
+    readTime: "4 min read",
     category: "React JS",
     url: "/blog/Reusable-Components",
     content: <Reusable_Components />,
