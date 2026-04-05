@@ -81,25 +81,6 @@ Environment variables (if used) must be added in:
 
 Cloudflare Pages → Settings → Environment Variables
 
-📝 Blog System
-Blog posts are stored as JavaScript objects with HTML content:
-
-js
-```bash
-export const posts = {
-  "Using-Resend-Api": {
-    title: "Using Resend API",
-    content: "<h2>How I built email service...</h2>"
-  }
-};
-```
-Rendered using:
-
-jsx
-```bash
-<div dangerouslySetInnerHTML={{ __html: post.content }} />
-```
-
 🤝 Contributing
 This is a personal portfolio, but suggestions and improvements are welcome.
 Feel free to open an issue or submit a pull request.
