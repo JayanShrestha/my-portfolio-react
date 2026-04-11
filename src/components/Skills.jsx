@@ -39,9 +39,7 @@ const Skills = () => {
                 <div className="pl-6 text-n-8/50 dark:text-slate-500">
                   ✓ TypeScript
                 </div>
-                <div className="pl-6 text-n-8/50 dark:text-slate-500">
-                  ✓ Next.js
-                </div>
+
                 <div className="pl-6 text-n-8/50 dark:text-slate-500">
                   ✓ Tailwind CSS
                 </div>
@@ -64,6 +62,9 @@ const Skills = () => {
                 </div>
                 <div className="pl-6 text-n-8/50 dark:text-slate-500">
                   ✓ Express
+                </div>
+                <div className="pl-6 text-n-8/50 dark:text-slate-500">
+                  ✓ NestJS
                 </div>
                 <div className="pl-6 text-n-8/50 dark:text-slate-500">
                   ✓ Laravel
