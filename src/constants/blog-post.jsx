@@ -1,5 +1,6 @@
 import Using_Resend_Api from "../Blogcomponent/Using-Resend-Api";
 import Reusable_Components from "../Blogcomponent/Reusable-Components";
+import Cold_start from "../Blogcomponent/Cold-start-parallel-processing";
 export const blog_post = [
   {
     id: "0",
@@ -23,5 +24,17 @@ export const blog_post = [
     category: "React JS",
     url: "/blog/Reusable-Components",
     content: <Reusable_Components />,
+  },
+  {
+    id: "2",
+    title:
+      "Problem on Koyeb: CORS, Cold starts & 10x Faster Parallel Processing Fix",
+    excerpt:
+      "Have you ever wondered that the first few fetch requests always failed, but every request after that worked flawlessly. No errors in logs. No crashes. No exceptions. Just silent failures.",
+    date: "April 12th, 2026",
+    readTime: "5 min read",
+    category: "Nest JS",
+    url: "/blog/Cold-start",
+    content: <Cold_start />,
   },
 ];
