@@ -60,7 +60,7 @@ const Projects = () => {
                     <div className="flex flex-col justify-between items-center sm:flex-row max-w-lg">
                       {" "}
                       <div className="flex justify-center items-center">
-                        <span className="flex pl-2 bg-color-1 p-2 rounded-xl transition-all hover:scale-105">
+                        <span className="flex pl-2 bg-color-1/50 p-2 rounded-xl transition-all hover:scale-105">
                           {" "}
                           <View />
                           <a href={item.url} target="_blank">
@@ -71,7 +71,7 @@ const Projects = () => {
                         <span className="flex pl-2">
                           {item.repo ? (
                             <a
-                              className="flex bg-color-1 p-2 rounded-xl  hover:scale-105 transition-all"
+                              className="flex bg-color-1/50 p-2 rounded-xl  hover:scale-105 transition-all"
                               href={item.repo}
                               target="_blank"
                             >
@@ -80,14 +80,14 @@ const Projects = () => {
                           ) : (
                             <span className="flex">
                               <a
-                                className="flex bg-color-1 p-2 rounded-xl  hover:scale-105 transition-all"
+                                className="flex bg-color-1/50 p-2 rounded-xl  hover:scale-105 transition-all"
                                 href={item.frontendRepo}
                               >
                                 <Github />
                                 Front-End Repo
                               </a>
                               <a
-                                className="flex pl-2 bg-color-1 p-2 rounded-xl  hover:scale-105 ml-2 transition-all"
+                                className="flex pl-2 bg-color-1/50 p-2 rounded-xl  hover:scale-105 ml-2 transition-all"
                                 href={item.backendRepo}
                               >
                                 <Github />

@@ -20,9 +20,9 @@ const Blog = () => {
       id="Blog"
     >
       <div
-        className={`container mt-8 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} mb-48`}
+        className={`container mt-16 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} mb-48`}
       >
-        <div className="flex flex-wrap flex-col gap-4 px-8 lg:px-4 md:p-16 w-full bg-color-1/20 rounded-2xl ">
+        <div className="flex flex-wrap flex-col gap-4 p-8 lg:px-4 md:p-16 w-full bg-color-1/20 rounded-2xl ">
           <h1 className="h1">Blog</h1>
           <p className="body-1 text-n-4">
             Thoughts on software engineering/Web development, lessons learned,
