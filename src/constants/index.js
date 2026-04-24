@@ -1,7 +1,7 @@
 import Domain from "../assets/Projects/DomainRank.png";
 import Portfolio from "../assets/Projects/Portfolio.png";
 import Keeper from "../assets/Projects/Keeper.png";
-
+import weather from "../assets/Projects/WeatherApp.png";
 export const navigation = [
   {
     id: "0",
@@ -69,6 +69,24 @@ export const projects = [
   },
   {
     id: "2",
+    title: "Weather Application",
+    url: "https://weatherapp.jayanshrestha.com/",
+    frontendRepo: "https://github.com/JayanShrestha/Weather-App-Frontend",
+    backendRepo: "https://github.com/JayanShrestha/Weather-App-Backend",
+    description:
+      "A Weather Application built on React, tailwind, framer-motion, and meteocons on frontend and Node JS, and Express.js on backend. It fetches the weather information from Openweather API for current weather and 5 days forecast.",
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "Node JS ",
+      "Express JS",
+      "OpenweatherAPI",
+      "GoogleMaps API",
+    ],
+    image: weather,
+  },
+  {
+    id: "3",
     title: "Keeper App",
     url: "https://keeper.jayanshrestha.com/",
     repo: "https://github.com/JayanShrestha/Keeper-App",
