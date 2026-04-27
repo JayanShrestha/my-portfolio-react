@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="relative grid md:grid-cols-2 gap-12 ">
           {projects.map((item, index) => {
             return (
-              <Card id={index}>
+              <Card id={index} key={index}>
                 <div className="flex flex-wrap flex-col">
                   <p className="h6 body-1"> {item.title}</p>
                   <p className="text-n-8/50 dark:text-n-1/50">
@@ -48,9 +48,12 @@ const Projects = () => {
                     />
                   </p>
                   <div className="flex flex-wrap justify-between py-3">
-                    {item.tech.map((item) => {
+                    {item.tech.map((item, index) => {
                       return (
-                        <span className="border border-color-1 p-2 m-2 rounded-2xl text-color-1 text-sm">
+                        <span
+                          key={index}
+                          className="border border-color-1 p-2 m-2 rounded-2xl text-color-1 text-sm"
+                        >
                           {item}
                         </span>
                       );

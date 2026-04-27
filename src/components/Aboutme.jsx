@@ -113,11 +113,11 @@ const Aboutme = () => {
           <ul
             className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
-            {education.map((item) => {
+            {education.map((item, index) => {
               return (
                 <>
                   {" "}
-                  <li className="py-2">
+                  <li key={index} className="py-2">
                     <span className=" font-bold underline">
                       {item.title} {item.university} {item.date}
                     </span>
@@ -140,11 +140,11 @@ const Aboutme = () => {
           <ul
             className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
-            {experience.map((item) => {
+            {experience.map((item, index) => {
               return (
                 <>
                   {" "}
-                  <li className="py-2">
+                  <li className="py-2" key={index}>
                     <span className="dark:text-slate-100 font-bold underline">
                       {item.title}
                     </span>
@@ -153,8 +153,8 @@ const Aboutme = () => {
                   </li>
                   <li>
                     <ol className="py-2">
-                      {item.resp.map((item) => {
-                        return <li>• {item}</li>;
+                      {item.resp.map((item, index) => {
+                        return <li key={index}>• {item}</li>;
                       })}
                     </ol>
                   </li>
@@ -176,9 +176,9 @@ const Aboutme = () => {
           <ul
             className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
-            {tech_stack.map((item) => {
+            {tech_stack.map((item, index) => {
               return (
-                <li>
+                <li key={index}>
                   <span className="dark:text-slate-100 font-bold underline">
                     {item.title}
                   </span>{" "}
