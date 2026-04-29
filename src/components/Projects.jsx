@@ -39,7 +39,7 @@ const Projects = () => {
               <Card id={index} key={index}>
                 <div className="flex flex-wrap flex-col">
                   <p className="h6 body-1"> {item.title}</p>
-                  <p className="body-2 text-n-8/50 dark:text-n-1/50">
+                  <p className=" body-2 text-n-8/50 dark:text-n-1/50">
                     {item.description}
                     <img
                       src={item.image}
