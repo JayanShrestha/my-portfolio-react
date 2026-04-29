@@ -1,4 +1,4 @@
-# 🚀 My Portfolio — React + Vite + Tailwind CSS
+# 🚀 My Portfolio — React + Tailwind CSS + Figma
 
 A modern, fast, and fully responsive developer portfolio built using **React**, **Vite**, and **Tailwind CSS**.  
 This portfolio showcases my projects, skills, experience, and blog posts with smooth UI/UX, reusable components, and clean code architecture.
