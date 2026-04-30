@@ -1,9 +1,11 @@
 import Using_Resend_Api from "../Blogcomponent/Using-Resend-Api";
 import Reusable_Components from "../Blogcomponent/Reusable-Components";
 import Cold_start from "../Blogcomponent/Cold-start-parallel-processing";
+import Rate_Limiting from "../Blogcomponent/Rate-limiting";
 import react from "../assets/Blogs/Logo/React.png";
 import node from "../assets/Blogs/Logo/Node.png";
 import nest from "../assets/Blogs/Logo/Nest.jpg";
+import ratelimit from "../assets/Blogs/Logo/RateLimiting.png";
 export const blog_post = [
   {
     id: "0",
@@ -42,5 +44,18 @@ export const blog_post = [
     url: "/blog/Cold-start",
     content: <Cold_start />,
     img: nest,
+  },
+  {
+    id: "3",
+    title:
+      "Rate Limiting and Job queue for building API layer that doesn't break ",
+    excerpt:
+      "I hit a wall where API only takes 1 request per second (free API rate limiting) and I ran a prompt to bypass this and no matter how many requests are in queue, the API call would be every 1 second.",
+    date: "April 30th, 2026",
+    readTime: "3 min read",
+    category: "Nest JS",
+    url: "/blog/Rate-limiting",
+    content: <Rate_Limiting />,
+    img: ratelimit,
   },
 ];
