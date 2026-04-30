@@ -18,7 +18,6 @@ const Hero = () => {
           <h1
             className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h1 mb-6`}
           >
-            👋
             <span className="block text-transparent bg-clip-text bg-gradient-to-br from-color-6 via-color-5 to-color-1">
               Hi, I'm Jayan Shrestha.
             </span>
