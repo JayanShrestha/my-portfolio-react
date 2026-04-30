@@ -25,7 +25,7 @@ const Posts = () => {
           className="px-8 lg:px-4 md:p-16"
           //dangerouslySetInnerHTML={{ __html: blog_post[0].content }}
         >
-          <div className="flex gap-4 items-center">
+          <div className="grid md:flex gap-4 items-center">
             <img src={post[0].img} className="h-24 w-24 rounded-full" />
             <h1 className="h2 font-bold mt-4">{post[0].title}</h1>
           </div>
