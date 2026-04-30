@@ -48,7 +48,7 @@ export const blog_post = [
   {
     id: "3",
     title:
-      "Rate Limiting and Job queue for building API layer that doesn't break ",
+      "Rate Limiting and Singleflight for building API layer that doesn't break ",
     excerpt:
       "I hit a wall where API only takes 1 request per second (free API rate limiting) and I ran a prompt to bypass this and no matter how many requests are in queue, the API call would be every 1 second.",
     date: "April 30th, 2026",
