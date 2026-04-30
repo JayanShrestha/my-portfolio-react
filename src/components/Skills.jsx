@@ -9,13 +9,12 @@ const Skills = () => {
 
   return (
     <Section
-      className="pt-48 "
       crosses
       crossesOffset="lg:translate-y-20"
       customPaddings
       id="skills"
     >
-      <div className={`container mt-24 lg:mt-32 items-center`}>
+      <div className={`container md:px-24 mt-24 lg:mt-64  items-center gap-12`}>
         <h1
           className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h1 mb-6`}
         >
@@ -23,7 +22,7 @@ const Skills = () => {
         </h1>
 
         <div
-          className={`relative transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} grid md:grid-cols-3 gap-12`}
+          className={`relative mt-16 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} grid md:grid-cols-3 gap-12`}
         >
           <div className="relative gradient-animation rounded-2xl p-8 dark:border-n-8/50 border-n-1 backdrop-blur">
             <div className="dark:bg-n-8/50 bg-n-1 rounded-lg p-6">

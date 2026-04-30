@@ -1,6 +1,9 @@
 import Using_Resend_Api from "../Blogcomponent/Using-Resend-Api";
 import Reusable_Components from "../Blogcomponent/Reusable-Components";
 import Cold_start from "../Blogcomponent/Cold-start-parallel-processing";
+import react from "../assets/Blogs/Logo/React.png";
+import node from "../assets/Blogs/Logo/Node.png";
+import nest from "../assets/Blogs/Logo/Nest.jpg";
 export const blog_post = [
   {
     id: "0",
@@ -13,6 +16,7 @@ export const blog_post = [
     category: "Node/Express JS",
     url: "/blog/Using-Resend-Api",
     content: <Using_Resend_Api />,
+    img: node,
   },
   {
     id: "1",
@@ -24,6 +28,7 @@ export const blog_post = [
     category: "React JS",
     url: "/blog/Reusable-Components",
     content: <Reusable_Components />,
+    img: react,
   },
   {
     id: "2",
@@ -36,5 +41,6 @@ export const blog_post = [
     category: "Nest JS",
     url: "/blog/Cold-start",
     content: <Cold_start />,
+    img: nest,
   },
 ];

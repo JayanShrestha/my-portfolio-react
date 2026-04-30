@@ -21,7 +21,6 @@ const Aboutme = () => {
   const pathname = useLocation();
   return (
     <Section
-      className={`pt-48`}
       crosses
       crossesOffset="lg:translate-y-20"
       customPaddings
@@ -31,7 +30,7 @@ const Aboutme = () => {
         className={
           pathname.pathname === "/aboutme"
             ? `hidden`
-            : `container mt-24 lg:mt-32 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`
+            : `container md:px-24 mt-48 lg:mt-64 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`
         }
       >
         <div className="relative z-1 max-w-5xl mx-auto mb-16 md:mb-8">
@@ -45,7 +44,7 @@ const Aboutme = () => {
             </span>
           </h1>
           <p
-            className={`body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
+            className={`body-2 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
             {
               "Hi, I am Full-stack software engineer specializing in mostly Frontend (React, Vue) and Backend (Node/Express). Currently, I am living in Sydney, Australia working as a frontend developer in AutechJobs. I am deeply passionate about solving problems by building scalable web applicaitons."
@@ -66,7 +65,7 @@ const Aboutme = () => {
         </div>
       </div>
       <div
-        className={`${pathname.pathname !== "/aboutme" ? `hidden` : `container mt-24 lg:mt-32 flex flex-col-reverse md:flex gap-12 items-center transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}`}
+        className={`${pathname.pathname !== "/aboutme" ? `hidden` : `container md:px-24 mt-24 lg:mt-32 flex flex-col-reverse md:flex gap-12 items-center transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}`}
       >
         <div className="relative z-1 max-w-5xl mx-auto mb-16 md:mb-8">
           <h1 className={`h2 font-bold mb-6 flex flex-wrap items-center`}>
@@ -79,9 +78,9 @@ const Aboutme = () => {
             </span>
           </h1>
           <ul
-            className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8`}
+            className={`body-2 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8`}
           >
-            <li className="py-2 transition-colors hover:text-color-1">
+            <li className="py-2 transition-colors text-color-1 hover:text-color-2">
               <a
                 href="https://www.udemy.com/certificate/UC-779e4672-4f69-4dfa-a31e-ade5dd9da676/"
                 target="_blank"
@@ -90,7 +89,7 @@ const Aboutme = () => {
                 ES6, OAuth, React, Node, Express) - Angela Yu, Udemy
               </a>
             </li>
-            <li className="py-2 transition-colors hover:text-color-1">
+            <li className="py-2 transition-colors text-color-1 hover:text-color-2">
               <a
                 href="https://www.freecodecamp.org/certification/jayanshrestha/responsive-web-design"
                 target="_blank"
@@ -111,7 +110,7 @@ const Aboutme = () => {
             </span>
           </h1>
           <ul
-            className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
+            className={`body-2 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
             {education.map((item, index) => {
               return (
@@ -138,7 +137,7 @@ const Aboutme = () => {
             </span>
           </h1>
           <ul
-            className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
+            className={`body-2 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
             {experience.map((item, index) => {
               return (
@@ -174,7 +173,7 @@ const Aboutme = () => {
             </span>
           </h1>
           <ul
-            className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
+            className={`body-2 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
             {tech_stack.map((item, index) => {
               return (
@@ -199,7 +198,7 @@ const Aboutme = () => {
             </span>
           </h1>
           <p
-            className={`body-2 md:body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
+            className={`body-2 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8"}`}
           >
             {
               "Hi, I am Full-stack software engineer specializing in mostly Frontend (React, Vue) and Backend (Node/Express). Currently, I am living in Sydney, Australia working as a frontend developer in AutechJobs. I am deeply passionate about solving problems by building scalable web applicaitons."

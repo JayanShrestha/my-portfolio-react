@@ -45,8 +45,8 @@ export const projects = [
     backendRepo:
       "https://github.com/JayanShrestha/Domain-Ranking-Application-backend",
     description:
-      "A full-stack web app that visualizes Tranco domain rankings over time. Built with Vue.js, Tailwind CSS, and Chart.js, it allows users to input one or multiple domains and view their ranking history in a responsive chart.",
-    tech: ["Vue", "Tailwind CSS", "Chart JS ", "Nest JS", "Neon PostgreSQL"],
+      "A full-stack web app that visualizes Tranco domain rankings over time, and it allows users to input one or multiple domains and view their ranking history in a responsive chart.",
+    tech: ["Vue", "Tailwind CSS", "Nest JS"],
     image: Domain,
   },
   // {
@@ -63,8 +63,8 @@ export const projects = [
     url: "https://jayanshrestha.com/",
     repo: "https://github.com/JayanShrestha/my-portfolio-react",
     description:
-      "A portfolio created using React and tailwind css with custom hooks. It showcases the projects, experiences and education. This project was deployed on Cloudflare FaaS which performs CI/CD.",
-    tech: ["React", "Tailwind CSS", "Figma", "CloudFlare"],
+      "A portfolio created using React and tailwind css with custom hooks. It showcases the projects, experiences, education, and certification. This project also host my blog posts.",
+    tech: ["React", "Tailwind CSS", "Figma"],
     image: Portfolio,
   },
   {
@@ -74,25 +74,8 @@ export const projects = [
     frontendRepo: "https://github.com/JayanShrestha/Weather-App-Frontend",
     backendRepo: "https://github.com/JayanShrestha/Weather-App-Backend",
     description:
-      "A Weather Application built on React, tailwind, framer-motion, and meteocons on frontend and Node JS, and Express.js on backend. It fetches the weather information from Openweather API for current weather and 5 days forecast.",
-    tech: [
-      "React",
-      "Tailwind CSS",
-      "Node JS ",
-      "Express JS",
-      "OpenweatherAPI",
-      "GoogleMaps API",
-    ],
+      "A Weather Application built on React, tailwind, framer-motion, and meteocons on frontend using GoogleMap API, and Node/Express.js on backend using Openweather API.",
+    tech: ["React", "Node JS ", "Express JS"],
     image: weather,
-  },
-  {
-    id: "3",
-    title: "Keeper App",
-    url: "https://keeper.jayanshrestha.com/",
-    repo: "https://github.com/JayanShrestha/Keeper-App",
-    description:
-      "A keeper application that uses React UseState to add the notes on Single Page Application. The notes can be deleted and added from the Input box.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Figma"],
-    image: Keeper,
   },
 ];

@@ -10,27 +10,21 @@ const Hero = () => {
   const { animateOnLoad } = useText();
 
   return (
-    <Section
-      className="pt-48 "
-      crosses
-      crossesOffset="lg:translate-y-20"
-      customPaddings
-      id="hero"
-    >
+    <Section crosses crossesOffset="lg:translate-y-20" id="hero">
       <div
-        className={`container mt-24 lg:mt-32 grid md:grid-cols-2 gap-12 items-center`}
+        className={`container mt-24 md:px-24 lg:mt-32 grid md:grid-cols-2 gap-12 items-center`}
       >
-        <div className="relative z-1 max-w-5xl mx-auto mb-16 md:mb-8">
+        <div className="relative z-1 max-w-5xl mb-16 md:mb-8">
           <h1
             className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h1 mb-6`}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-br from-color-6 via-color-5 to-color-1">
-              I'm Jayan Shrestha.
+              Hi, I'm Jayan Shrestha.
             </span>
-            <span className="block">Full-Stack Software Engineer</span>
+            <span className="block">Software Engineer</span>
           </h1>
           <p
-            className={`body-1 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "}`}
+            className={`body-2 max-w-3xl mx-auto mb-6 text-n-8/50 dark:text-n-1/50 lg:mb-8 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "}`}
           >
             <Typewriter
               onInit={(typewriter) => {
@@ -40,7 +34,7 @@ const Hero = () => {
               }}
               options={{
                 strings: [
-                  "A T-Shaped Full Stack Web Developer",
+                  "A T-Shaped Full Stack Software Developer",
                   "M.Tech in Software Engineering",
                   "Freelance Frontend Developer at Au Tech Jobs",
                 ],
@@ -51,7 +45,7 @@ const Hero = () => {
               }}
             />
             {
-              "Building high-performance web applications with modern architectures. Focusing on scalability, developer experience, and pixel-perfect user interfaces."
+              "Building high-performance web applications mainly with React, TypeScript, Node.js, and PostgreSQL, and focusing on scalability, and production-ready software."
             }
           </p>
           <div
@@ -86,7 +80,7 @@ const Hero = () => {
         >
           <div className="relative gradient-animation rounded-2xl p-8 dark:border-n-8/50 border-n-1 backdrop-blur">
             <div className="dark:bg-n-8/50 bg-n-1 rounded-lg p-6">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center  gap-2 mb-4">
                 <span className="text-purple-400 font-mono text-sm">
                   &gt;_ terminal
                 </span>
