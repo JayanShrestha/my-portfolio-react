@@ -30,9 +30,9 @@ const Header = () => {
 
   return (
     <div
-      className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0 flex fixed top-0 left-0 z-50 border-b border-slate-200 dark:border-n-6 bg-n-1 dark:bg-n-8  w-full justify-evenly" : "opacity-0 translate-y-4 "}`}
+      className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0 flex fixed top-0 left-0 z-50 border-b border-slate-200 dark:border-n-6 bg-n-1 dark:bg-n-8  w-full" : "opacity-0 translate-y-4 "}`}
     >
-      <div className={`flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4`}>
+      <div className={`flex items-start p-5`}>
         <a className="block w-[12rem] xl:mr-8" href="/">
           <img
             className="dark:invert w-20 h-20"

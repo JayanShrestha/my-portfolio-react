@@ -30,11 +30,13 @@ const Aboutme = () => {
         className={
           pathname.pathname === "/aboutme"
             ? `hidden`
-            : `container md:px-24 mt-48 lg:mt-64 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`
+            : `container md:px-24 mt-48 lg:mt-64 grid items-center justify-center gap-12 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`
         }
       >
         <div className="relative z-1 max-w-5xl mx-auto mb-16 md:mb-8">
-          <h1 className={`h2 font-bold mb-6 flex flex-wrap items-center`}>
+          <h1
+            className={`h2 font-bold mb-6 flex flex-wrap items-center justify-center`}
+          >
             <span className="block pr-2">About Me</span>
             <span className="md:block hidden">
               <Info size={42} />
@@ -50,18 +52,11 @@ const Aboutme = () => {
               "Hi, I am Full-stack software engineer specializing in mostly Frontend (React, Vue) and Backend (Node/Express). Currently, I am living in Sydney, Australia working as a frontend developer in AutechJobs. I am deeply passionate about solving problems by building scalable web applicaitons."
             }
           </p>
-          <div className="flex flex-col justify-between sm:flex-row max-w-lg">
+          <div className="flex flex-col justify-center items-center sm:flex-row">
             <Button href={`/aboutme`}>
               <span>{`More About me ->`}</span>
             </Button>
           </div>
-        </div>
-        <div className="relative flex items-center justify-center">
-          <img
-            className="gradient-animation p-1 dark:border-n-8/50 border-n-1 backdrop-blur rounded-full sm:h-80 sm:w-80 h-64 w-64"
-            src={Portfolio}
-            alt="Profile Picture"
-          />
         </div>
       </div>
       <div
