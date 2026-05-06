@@ -13,9 +13,9 @@ const Hero = () => {
   return (
     <Section crosses crossesOffset="lg:translate-y-20" id="hero">
       <div
-        className={`container mt-24 md:px-24 lg:mt-32 flex flex-col xl:flex-row gap-6 items-center justify-center`}
+        className={`container w-full mt-24 md: lg:mt-32 flex flex-col xl:flex-row gap-16 items-center justify-center`}
       >
-        <div className="relative z-1 max-w-2xl mb-16 md:mb-8">
+        <div className="relative z-1 max-w-2xl mb-16 md:mb-8 ">
           <h1
             className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h2 mb-6`}
           >

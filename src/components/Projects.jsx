@@ -7,6 +7,7 @@ import useText from "../hooks/useText";
 
 const Projects = () => {
   const { animateOnLoad } = useText();
+  const reveresedProjects = projects.slice(0).reverse();
   //const handleClick = (url) => {
   //return window.open(url, "_blank", "noreferrer");
   // };
@@ -19,7 +20,7 @@ const Projects = () => {
       id="projects"
     >
       <div
-        className={`container md:px-24 mt-24 lg:mt-64 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+        className={`container md:px-24 mt-24 lg:mt-64 flex flex-col md:flex items-center gap-2 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
       >
         <div className="h2 font-bold mb-6 flex">
           <span className="flex flex-wrap items-center pl-4">
@@ -33,8 +34,8 @@ const Projects = () => {
           </span>
         </div>
 
-        <div className="relative grid lg:grid-cols-3">
-          {projects.map((item, index) => {
+        <div className="relative grid md:grid-cols-2 max-w-6xl">
+          {reveresedProjects.map((item, index) => {
             return (
               <Card id={index} key={index}>
                 <p className="py-4 body-2 font-bold"> {item.title}</p>
@@ -43,7 +44,7 @@ const Projects = () => {
 
                   <img
                     src={item.image}
-                    className="border-none rounded-2xl py-4 h-62 lg:h-48 w-full"
+                    className="border-none rounded-2xl py-4 h-62 lg:h-48 w-full object-cover"
                     alt="DomainRankApp Image"
                   />
                 </p>

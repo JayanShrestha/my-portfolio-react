@@ -14,24 +14,26 @@ const Skills = () => {
       customPaddings
       id="skills"
     >
-      <div className={`container md:px-24 mt-24 lg:mt-64  items-center gap-12`}>
+      <div
+        className={`container md:px-24 mt-24 lg:mt-64 flex flex-col md:flex items-center gap-2`}
+      >
         <h1
-          className={`transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h1 mb-6`}
+          className={`transition-all duration-1000 flex justify-center ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} h1 mb-6`}
         >
           <span className="block">Skills & Technologies</span>
         </h1>
 
         <div
-          className={`relative mt-16 transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} grid md:grid-cols-3 gap-12`}
+          className={`relative transition-all duration-1000 ${animateOnLoad ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "} grid md:grid-cols-3 gap-12`}
         >
           <div className="relative gradient-animation rounded-2xl p-8 dark:border-n-8/50 border-n-1 backdrop-blur">
-            <div className="dark:bg-n-8/50 bg-n-1 rounded-lg p-6">
+            <div className="dark:bg-n-8/50 bg-n-1 rounded-lg p-6 flex flex-col justify-between h-full">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-purple-400 font-mono flex gap-2">
                   <Globe /> <h2 className="body-1 font-bold">Frontend</h2>
                 </span>
               </div>
-              <div className="space-y-2 font-mono text-sm h-32">
+              <div className="space-y-2 font-mono text-sm h-32 flex flex-col justify-between">
                 <div className="pl-6 text-n-8/50 dark:text-slate-500">
                   ✓ React
                 </div>
