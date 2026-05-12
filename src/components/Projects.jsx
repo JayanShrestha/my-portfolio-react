@@ -34,7 +34,7 @@ const Projects = () => {
           </span>
         </div>
 
-        <div className="relative grid md:grid-cols-2 max-w-6xl">
+        <div className="relative grid lg:grid-cols-3 max-w-6xl">
           {reveresedProjects.map((item, index) => {
             return (
               <Card id={index} key={index}>
@@ -44,8 +44,8 @@ const Projects = () => {
 
                   <img
                     src={item.image}
-                    className="border-none rounded-2xl py-4 h-62 lg:h-48 w-full object-cover"
-                    alt="DomainRankApp Image"
+                    className="border-none rounded-2xl py-4 h-62 lg:h-48 w-full lg:w-72 object-cover"
+                    alt="Project Image"
                   />
                 </p>
                 <div className="flex flex-wrap justify-between py-3">
