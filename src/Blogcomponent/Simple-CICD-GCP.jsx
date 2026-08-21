@@ -2,12 +2,7 @@ const Simple_CICD_GCP = () => {
   return (
     <div className="flex flex-col py-4">
       <span>
-        <p className="mb-4 body-1 text-n-4">
-          If you're new to deploying backends on Google Cloud and want your app
-          to automatically update every time you push to GitHub, this post walks
-          you through the exact beginner‑friendly CI/CD setup I used. No fancy
-          DevOps tools — just:
-        </p>
+        <p className="mb-4 body-1 text-n-4">No fancy DevOps tools — just:</p>
         <ul className="mb-4 body-1 text-n-4">
           <li>- A Google Cloud service account</li>
           <li>- Artifact Registry + Cloud Run</li>
