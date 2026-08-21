@@ -153,7 +153,7 @@ const Simple_CICD_GCP = () => {
         Cloud Run automatically on every push.
       </p>
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">7. Final Result</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">6. Final Result</h3>
       <p className="mb-4 body-1 text-n-4">
         After adding:
         <ul>
@@ -171,7 +171,7 @@ const Simple_CICD_GCP = () => {
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-2">
-        8. Final Thoughts / Key Takeaways
+        7. Final Thoughts / Key Takeaways
       </h3>
       <p className="mb-4 body-1 text-n-4">
         <ul>
@@ -179,7 +179,6 @@ const Simple_CICD_GCP = () => {
           <li>• GitHub Actions must authenticate before Docker</li>
           <li>• Cloud Run needs iam.serviceAccountUser</li>
           <li>• A clean workflow removes 90% of beginner pain</li>
-          <li>• A health check keeps your API warm and fast</li>
         </ul>
       </p>
     </div>
