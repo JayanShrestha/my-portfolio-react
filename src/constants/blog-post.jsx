@@ -2,10 +2,12 @@ import Using_Resend_Api from "../Blogcomponent/Using-Resend-Api";
 import Reusable_Components from "../Blogcomponent/Reusable-Components";
 import Cold_start from "../Blogcomponent/Cold-start-parallel-processing";
 import Rate_Limiting from "../Blogcomponent/Rate-limiting";
+import Simple_CICD_GCP from "../Blogcomponent/Simple-CICD-GCP";
 import react from "../assets/Blogs/Logo/React.png";
 import node from "../assets/Blogs/Logo/Node.png";
 import nest from "../assets/Blogs/Logo/Nest.jpg";
 import ratelimit from "../assets/Blogs/Logo/RateLimiting.png";
+import docker from "../assets/Blogs/Logo/docker.png";
 export const blog_post = [
   {
     id: "0",
@@ -57,5 +59,18 @@ export const blog_post = [
     url: "/blog/Rate-limiting",
     content: <Rate_Limiting />,
     img: ratelimit,
+  },
+  {
+    id: "4",
+    title:
+      "How I Built a Simple CI/CD Pipeline on Google Cloud (Beginner Friendly Guide)",
+    excerpt:
+      "If you’ve ever tried deploying a backend to Google Cloud and wondered why everything feels a bit magical — or confusing — this post breaks down exactly how I set up a clean, beginner‑friendly CI/CD pipeline.",
+    date: "August 21st, 2026",
+    readTime: "4 min read",
+    category: "Node/Gcloud/Docker",
+    url: "/blog/Simple-CICD",
+    content: <Simple_CICD_GCP />,
+    img: docker,
   },
 ];
